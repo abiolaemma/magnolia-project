@@ -1,5 +1,5 @@
 apiVersion: v2
-name: magnolia-project
+name: mgnl
 description: Run Magnolia CMS on Kubernetes in production
 type: application
 version: 0.21.1
@@ -9,5 +9,5 @@ sources:
   - https://github.com/abiolaemma/magnolia-project.git
 maintainers:
   - name: Emmanuel Ogundipe
-    email: abiolaemma2014@gmail.com
-    url: https://github.com/abiolaemma/magnolia-project
+    email: diekmann@neoskop.de
+    url: https://www.neoskop.de

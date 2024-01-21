@@ -11,7 +11,7 @@ usage() {
 check_commands() {
     for command in $@; do
         if ! command -v $command >/dev/null; then
-            echo -e "Install $(bold $command)"
+            echo -e "Install $($command)"
             exit 1
         fi
     done
@@ -48,11 +48,11 @@ COMMAND=$(echo "helm upgrade --install \
     $NAMESPACE \
     $SCRIPT_DIR/../helm \
     -n $NAMESPACE \
-    --set paperboy.userPassword=$(pwgen 32 1) \
-    --set paperboy.token=$(pwgen 32 1) \
-    --set paperboyPreview.userPassword=$(pwgen 32 1) \
-    --set paperboyPreview.token=$(pwgen 32 1) \
-    --set mysql.rootPassword=$(pwgen 32 1) \
+    --set paperboy.userPassword="emmanuel_123" \
+    --set paperboy.token="emmanuel_123" \
+    --set paperboyPreview.userPassword="emmanuel_123" \
+    --set paperboyPreview.token="emmanuel_123" \
+    --set mysql.rootPassword="emmanuel_123" \
     --set magnoliaActivation.privateKey=$ACTIVATION_PRIVATE_KEY \
     --set magnoliaActivation.publicKey=$ACTIVATION_PUBLIC_KEY")
 
